@@ -1,5 +1,9 @@
 import React from 'react';
 import './global.css';
 
-const App: React.FC = () => <h1>Hello, myApp!</h1>;
+import SignIn from './pages/SignIn';
+
+const App: React.FC = () => {
+  return <SignIn />;
+};
 export default App;

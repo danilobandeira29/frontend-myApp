@@ -6,14 +6,13 @@ import './styles.css';
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   icon: React.ComponentType<IconBaseProps>;
   placeholder: string;
-  type?: string;
 }
 
-const Input: React.FC<InputProps> = ({ icon: Icon, placeholder, type }) => {
+const Input: React.FC<InputProps> = ({ icon: Icon, placeholder, ...rest }) => {
   return (
     <div className="container">
       <Icon size={20} color="#333" />
-      <input placeholder={placeholder} type={type} />
+      <input placeholder={placeholder} {...rest} />
     </div>
   );
 };

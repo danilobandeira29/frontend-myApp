@@ -2,6 +2,7 @@ import React from 'react';
 
 import './styles.css';
 import { FiMail, FiLock, FiLogIn } from 'react-icons/fi';
+import Input from '../../components/Input';
 
 const SignIn: React.FC = () => {
   return (
@@ -9,14 +10,9 @@ const SignIn: React.FC = () => {
       <section className="sign-form">
         <form>
           <h1>Faça seu logon</h1>
-          <div className="form-input">
-            <FiMail size={20} color="#333" />
-            <input placeholder="Email" />
-          </div>
-          <div className="form-input">
-            <FiLock size={20} color="#333" />
-            <input type="password" placeholder="Senha" />
-          </div>
+
+          <Input icon={FiMail} placeholder="E-mail" />
+          <Input type="password" icon={FiLock} placeholder="Senha" />
           <button type="submit">Acessar</button>
 
           <a href="/forgot">Esqueci minha senha</a>

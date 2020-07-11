@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  height: 50px;
+  padding: 0px 12px;
+  background-color: #dcdce6;
+  border: 1px solid #dcdce6;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+}
+
+.container svg {
+  margin-right: 10px;
+}
+
+.container input {
+  flex: 1;
+  background-color:#dcdce6;
+  color: #333;
+  border: none;
+}
+
+.container + .container{
+  margin-top: 10px;
+}

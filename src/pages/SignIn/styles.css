@@ -30,24 +30,6 @@
   margin-bottom: 30px;
 }
 
-
-.sign-container .sign-form form button {
-  width: 100%;
-  height: 50px;
-  padding: 0 16px;
-  background-color: #E02041;
-  color: white;
-  font-weight: 500;
-  border: none;
-  border-radius: 4px;
-  margin-top: 16px;
-
-}
-
-.sign-container .sign-form form button:hover {
-  filter: brightness(85%);
-}
-
 .sign-container .sign-form a {
   color: #333;
   text-decoration: none;

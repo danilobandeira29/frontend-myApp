@@ -1,5 +1,6 @@
 .sign-container {
   width: 100%;
+  max-width: 1120px;
   height: 100vh;
   margin: 0 auto;
 
@@ -10,7 +11,6 @@
 
 .sign-container .sign-form {
   width: 100%;
-  max-width: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +22,6 @@
   flex-direction: column;
   width: 340px;
   text-align: center;
-
   margin-bottom: 40px;
 }
 
@@ -54,8 +53,8 @@
   margin-right: 16px;
 }
 
-.background-img {
-  flex: 1;
-  background: url('../../assets/sign-in-background.svg') no-repeat center;
-  background-size: contain;
+@media screen and (max-width: 750px){
+  .sign-container > img {
+    display: none;
+  }
 }

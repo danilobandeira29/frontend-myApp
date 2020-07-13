@@ -5,6 +5,7 @@
   margin: 0 auto;
 
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   padding: 20px 24px;
@@ -35,27 +36,19 @@
   margin-bottom: 30px;
 }
 
-.sign-container .sign-form a {
+.sign-container .sign-form > a {
   color: #333;
   text-decoration: none;
-  margin-top: 40px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
 }
 
-.sign-container a:hover {
+.sign-container .sign-form > a:hover {
   opacity: 0.8;
 }
 
-.sign-container .sign-form form + a{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #E02041;
-
-  text-decoration: none;
-}
-
-.sign-container .sign-form form + a svg {
+.sign-container .sign-form > a svg {
   margin-right: 16px;
 }
 

@@ -23,6 +23,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
 
   const handleInputFocus = useCallback(() => {
     setIsFocused('focused');
+    setIsFilled('#333');
   }, []);
 
   const handleInputBlur = useCallback(() => {

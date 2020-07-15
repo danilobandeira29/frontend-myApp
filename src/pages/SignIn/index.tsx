@@ -1,16 +1,49 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 
 import './styles.css';
 import { FiMail, FiLock, FiLogIn } from 'react-icons/fi';
+import * as Yup from 'yup';
+import { FormHandles } from '@unform/core';
+import { Form } from '@unform/web';
+
+import getValidationsErrors from '../../utils/getValidationErrors';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import signInBackgroundImg from '../../assets/sign-in-background.svg';
 
+interface SignInData {
+  email: string;
+  password: string;
+}
+
 const SignIn: React.FC = () => {
+  const formRef = useRef<FormHandles>(null);
+
+  const handleSubmit = useCallback(async (data: SignInData) => {
+    try {
+      formRef.current?.setErrors({});
+      const schema = Yup.object().shape({
+        email: Yup.string()
+          .email('Digite um e-mail válido')
+          .required('E-mail obrigatório'),
+        password: Yup.string().required('Senha obrigatória'),
+      });
+
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+    } catch (err) {
+      if (err instanceof Yup.ValidationError) {
+        const errors = getValidationsErrors(err);
+
+        formRef.current?.setErrors(errors);
+      }
+    }
+  }, []);
   return (
     <div className="sign-container">
       <section className="sign-form">
-        <form>
+        <Form ref={formRef} onSubmit={handleSubmit}>
           <h1>Faça seu logon</h1>
 
           <Input name="email" icon={FiMail} placeholder="E-mail" />
@@ -23,7 +56,7 @@ const SignIn: React.FC = () => {
           <Button type="submit">Acessar</Button>
 
           <a href="/forgot">Esqueci minha senha</a>
-        </form>
+        </Form>
 
         <a href="/signup">
           <FiLogIn size={20} color="#E02041" />

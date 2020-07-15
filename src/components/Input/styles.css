@@ -8,10 +8,15 @@
 
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .focused {
   border-color: #333;
+}
+
+.error {
+  border-color: #E02041;
 }
 
 .container svg {
@@ -27,4 +32,40 @@
 
 .container + .container{
   margin-top: 10px;
+}
+
+.container .icon-error{
+  margin: 0 0 0 10px;
+}
+
+.container .icon-error + .span-error {
+  width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: all 0.4s;
+  bottom: 95% ;
+  right: -17.5%;
+
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #c53030;
+  color: white;
+}
+
+.container .icon-error:hover + .span-error {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container .icon-error + .span-error::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #c53030 transparent transparent transparent;
 }

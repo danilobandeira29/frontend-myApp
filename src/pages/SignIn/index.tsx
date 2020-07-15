@@ -1,10 +1,12 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, useContext } from 'react';
 
 import './styles.css';
 import { FiMail, FiLock, FiLogIn } from 'react-icons/fi';
 import * as Yup from 'yup';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
+
+import { AuthContext } from '../../context/AuthContext';
 
 import getValidationsErrors from '../../utils/getValidationErrors';
 import Input from '../../components/Input';
@@ -18,28 +20,36 @@ interface SignInData {
 
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const { signIn } = useContext(AuthContext);
 
-  const handleSubmit = useCallback(async (data: SignInData) => {
-    try {
-      formRef.current?.setErrors({});
-      const schema = Yup.object().shape({
-        email: Yup.string()
-          .email('Digite um e-mail válido')
-          .required('E-mail obrigatório'),
-        password: Yup.string().required('Senha obrigatória'),
-      });
+  const handleSubmit = useCallback(
+    async (data: SignInData) => {
+      try {
+        formRef.current?.setErrors({});
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .email('Digite um e-mail válido')
+            .required('E-mail obrigatório'),
+          password: Yup.string().required('Senha obrigatória'),
+        });
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
-    } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        const errors = getValidationsErrors(err);
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
-        formRef.current?.setErrors(errors);
+        const { email, password } = data;
+
+        signIn({ email, password });
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationsErrors(err);
+
+          formRef.current?.setErrors(errors);
+        }
       }
-    }
-  }, []);
+    },
+    [signIn],
+  );
   return (
     <div className="sign-container">
       <section className="sign-form">

@@ -35,10 +35,10 @@
 }
 
 
-div.tooltip-container .icon-alert + .span-alert.error {
+div.tooltip-container .icon-alert + .span-alert {
   background-color: #c53030;
 }
 
-div.tooltip-container .icon-alert + .span-alert.error::after {
+div.tooltip-container .icon-alert + .span-alert::after {
   border-color: #c53030 transparent transparent transparent;
 }

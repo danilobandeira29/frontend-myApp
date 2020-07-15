@@ -1,0 +1,35 @@
+div.tooltip-container .icon-alert{
+  margin: 0 0 0 10px;
+}
+
+div.tooltip-container .icon-alert + .span-alert {
+  width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: all 0.4s;
+  bottom: 95% ;
+  right: -17.5%;
+
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #a2a2a8;
+  color: white;
+}
+
+div.tooltip-container .icon-alert:hover + .span-alert {
+  opacity: 1;
+  visibility: visible;
+}
+
+div.tooltip-container .icon-alert + .span-alert::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #a2a2a8 transparent transparent transparent;
+}

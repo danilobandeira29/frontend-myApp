@@ -6,8 +6,9 @@ import React, {
   useCallback,
 } from 'react';
 import { IconBaseProps } from 'react-icons';
-import { FiAlertCircle } from 'react-icons/fi';
 import { useField } from '@unform/core';
+
+import Tooltip from '../Tooltip';
 
 import './styles.css';
 
@@ -58,12 +59,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
         onBlur={handleInputBlur}
       />
 
-      {error && (
-        <>
-          <FiAlertCircle size={20} color="#c53030" className="icon-error" />
-          <span className="span-error">{error}</span>
-        </>
-      )}
+      {error && <Tooltip alert={error} className={isErrored} />}
     </div>
   );
 };

@@ -19,10 +19,6 @@
 
 }
 
-.toast-container .toast-content + div {
-  margin-top: 8px;
-}
-
 .toast-container .toast-content.sucess {
   background-color: #e6fffa;
   color: #2e656a;
@@ -31,6 +27,10 @@
 .toast-container .toast-content.error {
   background-color: #fddded;
   color: #c53030;
+}
+
+.toast-container .toast-content + div {
+  margin-top: 8px;
 }
 
 .toast-container .toast-content div {
@@ -48,15 +48,7 @@
 
 .toast-container .toast-content > svg{
   margin: 4px 12px 0 0;
-  color: #3172b7;
-}
-
-.toast-container .toast-content.sucess > svg {
-  color: #2e656a;
-}
-
-.toast-container .toast-content.error > svg {
-  color: #c53030;
+  color: inherit;
 }
 
 .toast-container .toast-content .button-toast-container {

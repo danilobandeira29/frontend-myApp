@@ -7,13 +7,13 @@
 - [Challenges](#-Challenges)
 - [Techs](#-Techs)
 - [Code formatters](#-Code-formatters)
-- [Clone the repository](#Clone-the-repository)
+- [Clone the repository](#-Clone-the-repository)
 
 
 ## 📝 About
 This is the frontend of myApp, which seeks to **create**, **read**, **update**, **delete**,
 clients from a hospital. Also includes user login to use these features.
-**The project will work correctly if you execute the** [**Backend available by clicking here**](https://github.com/danilobandeira29/backend-myApp)
+**The project will work correctly if you execute the** <a href="https://github.com/danilobandeira29/backend-myApp" target="_blank">**Backend available by clicking here**</a>
 
 ---
 
@@ -65,14 +65,14 @@ clients from a hospital. Also includes user login to use these features.
 - [Desafios](#-Desafios)
 - [Tecnologias](#-Tecnologias)
 - [Formatadores de Código](#-Formatadores-de-Código)
-- [Clonar o Projeto](#Clonar-o-Projeto)
+- [Clonar o Projeto](#-Clonar-o-Projeto)
 
 
 ## 📝 Sobre
 Frontend do myApp, que tem como objetivo **criar**, **ler**, **atualizar**, **deletar**,
 clientes de um hospital. Também inclui login para utilização dessas funcionalidades.
 **Para que o projeto funcione corretamente, você deve executar o**
-[**Backend disponível clicando aqui**](https://github.com/danilobandeira29/backend-myApp)
+<a href="https://github.com/danilobandeira29/backend-myApp" target="_blank">**Backend disponível clicando aqui**</a>
 
 ---
 
@@ -121,5 +121,5 @@ clientes de um hospital. Também inclui login para utilização dessas funcional
 
 ---
 
-Developed by/Desenvolvido por👻
-[Danilo Bandeira](https://www.linkedin.com/in/danilo-bandeira-4411851a4/)
+**Developed by/Desenvolvido por**👻
+<a href="https://www.linkedin.com/in/danilo-bandeira-4411851a4/">**Danilo Bandeira</a>**

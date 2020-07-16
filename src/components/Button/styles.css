@@ -1,4 +1,4 @@
-button {
+.bottom-component {
   width: 100%;
   height: 50px;
   padding: 0 16px;
@@ -11,6 +11,6 @@ button {
 
 }
 
-button:hover {
+.bottom-component:hover {
   filter: brightness(85%);
 }

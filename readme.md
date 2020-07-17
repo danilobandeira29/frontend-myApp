@@ -45,7 +45,7 @@ clients from a hospital. Also includes user login to use these features.
 - Open your terminal to write theses lines:
 ```bash
   ## clone repository
-  $ git clone https://github.com/danilobandeira29/frontend-myApp
+  $ git clone https://github.com/danilobandeira29/frontend-myApp.git
 
   ## access project directory
   $ cd frontend-myApp
@@ -104,7 +104,7 @@ clientes de um hospital. Também inclui login para utilização dessas funcional
 - Abra o seu terminal para escrever essas linhas:
 ```bash
   ## clonar repositório
-  $ git clone https://github.com/danilobandeira29/frontend-myApp
+  $ git clone https://github.com/danilobandeira29/frontend-myApp.git
 
   ## acessar o diretório do projeto
   $ cd frontend-myApp

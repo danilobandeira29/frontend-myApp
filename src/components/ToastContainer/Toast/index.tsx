@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   FiXCircle,
@@ -23,15 +23,21 @@ const toastType = {
 const Toast: React.FC<MessageProps> = ({ message }) => {
   const { removeToast } = useToast();
 
+  const [toastRemoveAnimation, setToastRemoveAnimation] = useState('');
+
   useEffect(() => {
-    const timer = setTimeout(() => removeToast(message.id), 3000);
+    const timer = setTimeout(() => {
+      setToastRemoveAnimation('remove');
+      setTimeout(() => removeToast(message.id), 1000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [message.id, removeToast]);
 
   return (
-    <div className={`toast-content ${message.type}`}>
+    <div className={`toast-content ${message.type} ${toastRemoveAnimation}`}>
       {toastType[message.type || 'info']}
+
       <div>
         <strong>{message.title}</strong>
         <span>{message.description}</span>

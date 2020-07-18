@@ -1,3 +1,19 @@
+@keyframes toastSlideIn {
+  from
+  { right: -100px; opacity: 0 ;}
+  to
+  { right: 0px; opacity: 1;}
+
+}
+
+@keyframes toastSlideOut {
+  from
+  { right: 0px; opacity: 1;}
+  to
+  { right: -100px; opacity: 0;}
+
+}
+
 .toast-content {
   width: 340px;
   position: relative;
@@ -8,7 +24,11 @@
 
   background-color: #ebf8ff;
   color: #3172b7;
+  animation: toastSlideIn 1s;
+}
 
+.toast-content.remove{
+  animation: toastSlideOut 1s;
 }
 
 .toast-content.sucess {

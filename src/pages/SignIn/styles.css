@@ -1,3 +1,14 @@
+@keyframes appearFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 .signin-container {
   width: 100%;
   max-width: 1120px;
@@ -21,6 +32,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  animation: appearFromLeft 1s;
 }
 
 .signin-container .sign-form form {

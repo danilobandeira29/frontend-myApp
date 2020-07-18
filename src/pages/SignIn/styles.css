@@ -1,4 +1,4 @@
-.sign-container {
+.signin-container {
   width: 100%;
   max-width: 1120px;
   height: 100vh;
@@ -10,12 +10,12 @@
   padding: 20px 24px;
 }
 
-.sign-container > img {
+.signin-container > img {
   width: 100%;
   max-width: 600px;
 }
 
-.sign-container .sign-form {
+.signin-container .sign-form {
   width: 100%;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@
   flex-direction: column;
 }
 
-.sign-container .sign-form form {
+.signin-container .sign-form form {
   display: flex;
   flex-direction: column;
   width: 340px;
@@ -31,21 +31,21 @@
   margin-bottom: 40px;
 }
 
-.sign-container .sign-form form h1 {
+.signin-container .sign-form form h1 {
   margin-bottom: 30px;
 }
 
-.sign-container .sign-form a {
+.signin-container .sign-form a {
   color: #333;
   text-decoration: none;
   margin-top: 40px;
 }
 
-.sign-container a:hover {
+.signin-container a:hover {
   opacity: 0.8;
 }
 
-.sign-container .sign-form form + a{
+.signin-container .sign-form form + a{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,12 +55,12 @@
   text-decoration: none;
 }
 
-.sign-container .sign-form form + a svg {
+.signin-container .sign-form form + a svg {
   margin-right: 16px;
 }
 
 @media screen and (max-width: 1040px){
-  .sign-container > img {
+  .signin-container > img {
     display: none;
   }
 }
